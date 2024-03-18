@@ -1,0 +1,23 @@
+.button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-btn);
+    color: var(--main-text-color);
+    border: var(--border);
+    transition: all .3s;
+
+    @include hover {
+        box-shadow: 1px 1px 10px 1px #E01E5A;
+    }
+}
+
+.button-pr {
+    background: var(--background-accent-btn);
+    border: none;
+    
+    @include hover {
+        box-shadow: 1px 1px 10px 1px #E01E5A;
+    }
+}

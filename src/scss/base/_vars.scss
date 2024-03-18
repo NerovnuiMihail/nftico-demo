@@ -1,0 +1,28 @@
+:root {
+	--container-width: 1350px;
+	--container-padding: 15px;
+
+	--font-family-base: 'Outfit', sans-serif;
+
+	--background: #09090A;
+	--background-accent: #1e1b33;
+
+	--background-accent-btn: linear-gradient(88deg, #0500fa 11.52%, #e01e5a 100%);
+	--background-btn: #1E1B33;
+
+	--border: 0.50px solid rgba(231, 231, 231, 0.4);
+	--border-radius: 12px;
+	--border-radius-smoll: 8px;
+
+	--main-text-color: #fff;
+	--accent: #ac182c;
+	--link-color: #2578c8;
+
+	--button-height: 44px;
+
+	--transition-duration: 0.2s;
+
+    --laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+}

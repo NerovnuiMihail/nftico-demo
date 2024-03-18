@@ -1,0 +1,91 @@
+.trending {
+    margin-inline: auto;
+    padding-bottom: 118px;
+    width: 100%;
+
+    .container {
+        .title {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .trending-slider {
+        margin-top: 60px;
+
+        &__wrapper {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            padding-bottom: 56px;
+
+            .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+                background: var(--background-accent-btn);
+            }
+
+            .swiper-pagination-progressbar {
+                height: 2px;
+                background: rgba(231, 231, 231, 0.24);
+            }
+
+            .swiper-horizontal > .swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite {
+                width: 648px;
+                height: var(--swiper-pagination-progressbar-size, 4px);
+                top: auto;
+                left: 50%;
+                bottom: 0px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .trending {
+        .container {
+            max-width: 1080px;
+        }
+    }    
+}
+
+@media (max-width: 1080px) {
+    .trending {
+        .container {
+            max-width: 700px;
+        }
+    }    
+}
+
+@media (max-width: 720px) {
+    .trending {
+        padding-bottom: 80px;
+
+        .container {
+            max-width: 350px;
+        }
+
+        .trending-slider {
+            margin-top: 40px;
+        }
+    }    
+}
+
+@media (max-width: 400px) {
+    .trending .slide-trending {
+        padding: 15px;
+        width: 300px;
+    }
+
+    .trending .slide-trending__img {
+        width: 100%;
+    }
+
+    .trending {
+        .trending-slider__img img {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

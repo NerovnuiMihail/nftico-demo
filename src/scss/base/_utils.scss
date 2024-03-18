@@ -1,0 +1,76 @@
+.none {
+	display: none !important;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.title {
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 48px; 
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+
+    &::after {
+        content: "NFTs";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 80px; 
+        line-height: 0.83333;
+        letter-spacing: -0.01em;
+        background: linear-gradient(88deg, #06045b 11.52%, #e01e5a 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media (max-width: 680px) {
+    .title {
+        font-size: 30px;
+
+        &::after  {
+            font-size: 62px;
+            bottom: 9px;
+        }
+    }
+}
+@media (max-width: 360px) {
+    .title {
+        font-size: 26px;
+
+        &::after  {
+            font-size: 54px;
+            bottom: 9px;
+        }
+    }
+}

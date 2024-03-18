@@ -1,0 +1,125 @@
+.drops-card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    width: 312px;
+    height: 435px;
+    background: var(--background-accent);
+    border-radius: var(--border-radius);
+
+    &__head {
+        margin-bottom: 16px;
+        order: 2;
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 24px;
+            line-height: 29px; 
+        }
+    }
+    
+    &__heart {
+        cursor: pointer;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        transition: color 0.3s;
+
+        &::after {
+            content: url(../img/icons/heart.svg);
+            position: absolute;
+            left: -19px;
+        }
+
+        &:hover {
+            color: #e01e5a;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        margin-bottom: 24px;
+        border-radius: var(--border-radius);
+        order: 1;
+
+        img {
+            max-width: 100%;
+            border-radius: var(--border-radius);
+        }
+    }
+
+    &__flow {
+        margin-bottom: 22px;
+        order: 3;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            display: inline-block;
+            padding-top: 2px;
+            padding-left: 16px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px; 
+            position: relative;
+
+            &::after {
+                content: url(../img/icons/Shape.png);
+                position: absolute;
+                left: 0;
+            }
+        }
+
+        ul {
+            width: 60px;
+            display: flex;
+            position: relative;
+
+            li {
+                max-width: 24px;
+                max-height: 24px;
+
+                &:nth-child(2) {
+                    position: absolute;
+                    left: 16px;
+                }
+
+                &:nth-child(3) {
+                    position: absolute;
+                    left: 36px;
+                }
+            }
+        }
+    }
+
+    .button {
+        padding: 12px;
+        border-radius: var(--border-radius-smoll);
+        order: 4;
+        text-transform: uppercase;
+
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        transition: background-color .9s;
+
+        &:hover {
+            background: var(--background-accent-btn);
+            border: inset 1px grey;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .drops-card {
+        margin-inline: auto;
+        max-width: 300px;
+
+        &__head {
+            align-items: center;
+        }
+    }
+}

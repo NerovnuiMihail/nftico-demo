@@ -1,0 +1,180 @@
+.slide-trending {
+    cursor: pointer;
+    padding: 24px;
+    width: 312px;
+    height: 439px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    background: var(--background-accent);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    &__title {
+        order: 3;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &__subtitle {
+        display: inline-block;
+        order: 2;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 8px;
+        position: relative;
+
+        &::after {
+            content: url(../img/icons/check.png);
+            position: absolute;
+            right: -19px;
+        }
+    }
+
+    &__img {
+        order: 1;
+        width: 264px;
+        height: 232px;
+        border-radius: var(--border-radius);
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            inset: 0;
+            border-radius: var(--border-radius);
+        }
+
+        &-actions {
+            z-index: 5;
+            width: 120px;
+            height: 30px;
+            display: flex;
+            position: absolute;
+            top: 16px;
+            right: -200px;
+            transition: all 0.4s;
+
+            .reload {
+                margin-right: 8px;
+                border-radius: var(--border-radius-smoll);
+                width: 38px;
+                height: 30px;
+                background: var(--background-accent);
+                position: relative;
+
+                &::after {
+                    content: url(../img/icons/reload.png);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+
+            .hearts {
+                border-radius: var(--border-radius-smoll);
+                padding-left: 30px;
+                width: 58px;
+                height: 30px;
+                background: var(--background-accent);
+                position: relative;
+                font-weight: 500;
+                font-size: 14px;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+
+                &::after {
+                    content: url(../img/icons/heart.svg);
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        .button {
+            width: 136px;
+            position: absolute;
+            padding: 16px;
+            border-radius: var(--border-radius-smoll);
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 14px; 
+            text-transform: capitalize;
+            transition: all 0.4s;
+        }
+
+        .trending-button {
+            bottom: -200px;
+        }
+    }
+
+    &__coin-wrapper {
+        margin-top: auto;
+        width: 100%;
+        order: 4;
+        padding: 16px;
+        display: grid;
+        gap: 10px;
+        grid-template-rows: 14px 11px;
+        grid-template-columns: 1fr 1fr;
+        border: var(--border);
+        border-radius: var(--border-radius-smoll);
+
+        div {
+            &:nth-child(1) {
+                align-self: start;
+                justify-self: start;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px; 
+                text-transform: capitalize;
+                text-align: center;
+                color: #c0c0c0;
+            }
+            &:nth-child(2) {
+                align-self: start;
+                justify-self: end;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px; 
+                text-transform: capitalize;
+                text-align: center;
+                color: #c0c0c0;
+            }
+            &:nth-child(3) {
+                align-self: start;
+                justify-self: start;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 14px; 
+                text-transform: capitalize;
+            }
+            &:nth-child(4) {
+                align-self: start;
+                justify-self: end;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 14px; 
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.slide-trending:hover .slide-trending__img-actions {
+    top: 16px;
+    right: 16px;
+}
+.slide-trending:hover .trending-button {
+    bottom: 16px;
+}

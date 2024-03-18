@@ -1,0 +1,251 @@
+.connect-wallet {
+    margin-inline: auto;
+    padding-top: 132px;
+    padding-bottom: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgba(231, 231, 231, 0.24);
+
+    &__content {
+        display: grid;
+        grid-template-columns: 546px 1fr;
+        margin-bottom: 215px;
+    }
+
+    &__img {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            display: block;
+            width: 450px;
+            height: 390px;
+            border-radius: 100%;
+            background-color: rgba(215, 29, 97, 0.6);
+            filter: blur(180px);
+        }
+        
+        img {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 60px;
+        }
+    }
+
+    &__description {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+        .button {
+            padding: 12px 20px;
+            width: 149px;
+            height: 44px;
+            border-radius: var(--border-radius-smoll);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.25;
+            color: #fff;
+        }
+    }
+
+    &__title {
+        margin-top: 83px;
+        margin-bottom: 28px;
+
+        display: inline-flex;
+        flex-direction: column;
+
+        font-weight: 500;
+        font-size: 44px;
+        line-height: 1.18182;
+        color: #fff;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.77778;
+        color: #c0c0c0;
+        margin-bottom: 48px;
+    }
+
+    &__partners {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .connect-wallet {
+        overflow: hidden;
+        
+        &__content {
+            grid-template-columns: 400px 1fr;
+            margin-bottom: 153px;
+        }
+
+        &__img {
+            img {
+                right: 0;
+            }
+        }
+
+        &__title {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .connect-wallet {
+        &__partners {
+            ul {
+                flex-wrap: wrap;
+                justify-content: space-around;
+                gap: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .connect-wallet {
+        &__content {
+            grid-template-columns: 300px 1fr;
+            margin-bottom: 95px;
+        }
+
+        &__img {
+            img {
+                right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .connect-wallet {
+        overflow-x: hidden;
+
+        &__content {
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px 500px;
+            // align-items: center;
+            margin-bottom: 50px;
+        }
+
+        &__img {
+            grid-column: 1/2;
+            grid-row: 1/2;
+
+            &::after {
+                width: 200px;
+                height: 300px;
+                top: -313px;
+                right: 796px;
+            }
+
+            img {
+                right: auto;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+
+            }
+        }
+
+        &__description {
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__title,
+        &__text {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 678px) {
+    .connect-wallet {
+        padding-top: 80px;
+
+        &__content {
+            grid-template-rows: 115px 500px;
+        }
+
+        &__img {
+            &::after {
+                top: -265px;
+                right: 729px;
+            }
+            img {
+                width: 250px;
+            }
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .connect-wallet {
+        padding-top: 40px;
+
+        &__content {
+            grid-template-rows: 180px 500px;
+        }
+
+        &__img {
+            &::after {
+                top: -265px;
+                right: 674px;
+            }
+            img {
+                width: 250px;
+            }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .connect-wallet {
+        padding-top: 0px;
+
+        &__content {
+            grid-template-rows: 220px 500px;
+        }
+
+        &__img {
+            &::after {
+                top: -155px;
+                right: 600px;
+            }
+            img {
+                width: 250px;
+            }
+        }
+
+        &__partners {
+            ul {
+                gap: 20px;
+            }
+        }
+    }
+}
